@@ -1,10 +1,12 @@
 # Program finds items located before the last minimum.
 arr = [1, 2, 2, -4, 0, 6, 7, 8, -9, -2, 12]
-a = arr.max
+s = []
 c = []
+c << arr.min(arr.size)
+b = c[0][-2]
 arr.each do |elem|
-  c << elem
-  break if elem == a
+  s << elem
+  break if elem == b
 end
-c.delete(a)
-puts "Elements located before the last minimum: #{c}"
+s.delete(b)
+puts "Elements located before the last minimum: #{s}"
