@@ -14,7 +14,7 @@ end
 array.each_with_index do |_, index|
   local_minima << array[index - 1] if array[index - 1] < array[index]
 end
-if local_minima.include? number_index[0]
+if local_minima.include? number_index.first
   puts "index: #{natural_index} - is a local minimum"
 else
   puts "index: #{natural_index} - not a local minimum"
