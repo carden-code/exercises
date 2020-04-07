@@ -8,12 +8,12 @@ after_max = []
 
 array.each do |element|
   before_min << element
-  break unless element != array.min
+  break unless element != array.min && array.max
 end
 
 array.reverse_each do |element|
   after_max << element
-  break unless element != array.max
+  break unless element != array.max && array.min
 end
 
 after_max.reverse!
