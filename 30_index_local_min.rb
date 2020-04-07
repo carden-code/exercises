@@ -5,7 +5,7 @@
 # The program determines whether an element
 # at the specified index with a local minimum.
 array = [1, -10, 2, -4, 0, 6, 7, 8, -9, 12, -2, 2]
-natural_index = 1
+natural_index = 4
 number_index = []
 local_minima = []
 array.each_with_index do |element, index|
