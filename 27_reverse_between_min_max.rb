@@ -3,8 +3,8 @@
 # The program rearranges the elements array
 # located between its minimum and maximum elements,
 array = [1, -10, 2, -4, 0, 6, 7, 8, -9, 12, -2, 2]
-puts index_min = array.index(array.min)
-puts index_max = array.index(array.max)
+index_min = array.index(array.min)
+index_max = array.index(array.max)
 before_min = []
 after_max = []
 
@@ -21,8 +21,6 @@ if index_min < index_max
   end
 
   array = array[index_min + 1..index_max - 1].reverse!
-  array.unshift(before_min)
-  array.push(after_max.reverse!)
 else
 
   array.each do |elem|
@@ -36,7 +34,7 @@ else
   end
 
   array = array[index_max + 1..index_min - 1].reverse!
-  array.unshift(before_min)
-  array.push(after_max.reverse!)
 end
-puts "#{array.flatten}"
+array.unshift(before_min)
+array.push(after_max.reverse!)
+puts "Product: #{array.flatten}"
